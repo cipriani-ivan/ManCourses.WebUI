@@ -1,0 +1,13 @@
+﻿@using ManCourses.Domain.Entities
+@model IEnumerable<Course>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@foreach(var p in Model)
+{
+    @p.CourseID
+        @p.Department
+}
+
