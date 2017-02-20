@@ -8,16 +8,19 @@ using System.Threading.Tasks;
 
 namespace ManCourses.Domain.Entities
 {
-
-    public class Course
+    [Table("Persons")]
+    public class Person
     {
-        public Course(){
+        public Person()
+        {
             this.CourseInstructors = new HashSet<CourseInstructor>();
         }
-        public int CourseID { get; set; }
-        public string Title { get; set; }
-        public int Credits { get; set; }
-        public int Department { get; set; }
+        [Key]
+        public int PersonID { get; set; }
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
+        public DateTime? HireDate { get; set; }
+        public DateTime? EnrollmentDate { get; set; }
 
         public virtual ICollection<CourseInstructor> CourseInstructors { get; set; }
     }

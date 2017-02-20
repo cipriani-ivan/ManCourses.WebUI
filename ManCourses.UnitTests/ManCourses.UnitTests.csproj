@@ -109,6 +109,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ManCourses.Domain\ManCourses.Domain.csproj">
+      <Project>{3B8011E4-C4F0-474F-8895-FED29309C178}</Project>
+      <Name>ManCourses.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ManCourses.WebUI\ManCourses.WebUI.csproj">
       <Project>{91A434F1-2724-4C33-8457-1A733A05C952}</Project>
       <Name>ManCourses.WebUI</Name>

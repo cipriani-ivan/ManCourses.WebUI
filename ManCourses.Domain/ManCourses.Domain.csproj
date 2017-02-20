@@ -81,6 +81,8 @@
     <Compile Include="Concrete\EFCoursesRepository.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Entities\Course.cs" />
+    <Compile Include="Entities\CourseInstructor.cs" />
+    <Compile Include="Entities\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

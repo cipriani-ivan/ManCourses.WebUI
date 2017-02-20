@@ -14,5 +14,13 @@ namespace ManCourses.Domain.Concrete
         {
             get { return context.Courses; }
         }
+        public IEnumerable<Person> Persons
+        {
+            get { return context.Persons; }
+        }
+        public IEnumerable<CourseInstructor> CourseInstructors
+        {
+            get { return context.CourseInstructors; }
+        }
     }
 }

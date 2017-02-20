@@ -7,5 +7,7 @@ namespace ManCourses.Domain.Abstract
     {
 
         IEnumerable<Course> Courses { get; }
+        IEnumerable<Person> Persons { get; }
+        IEnumerable<CourseInstructor> CourseInstructors { get; }
     }
 }

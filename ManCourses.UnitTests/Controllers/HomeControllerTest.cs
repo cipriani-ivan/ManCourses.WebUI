@@ -15,6 +15,7 @@ namespace ManCourses.UnitTests.Controllers
         [TestMethod]
         public void Index()
         {
+
             // Arrange
             HomeController controller = new HomeController();
 

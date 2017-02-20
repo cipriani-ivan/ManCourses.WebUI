@@ -1,13 +1,24 @@
-﻿@using ManCourses.Domain.Entities
-@model IEnumerable<Course>
+﻿@using ManCourses.WebUI.Models
+@model ModelViewSchool
 
 @{
     ViewBag.Title = "Home Page";
 }
 
-@foreach(var p in Model)
+@foreach(var p in Model.Courses)
 {
     @p.CourseID
         @p.Department
+}
+@foreach (var p in Model.Persons)
+{
+    @p.FirstName
+    @p.LastName
+}
+
+@foreach (var p in Model.CourseInstructors)
+{
+    @p.CourseID
+    @p.PersonID
 }
 

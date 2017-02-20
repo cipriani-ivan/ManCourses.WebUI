@@ -1,4 +1,5 @@
 ﻿using ManCourses.Domain.Abstract;
+using ManCourses.WebUI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +12,17 @@ namespace ManCourses.WebUI.Controllers
     {
         private ICoursesRepository courseRepository;
 
+        public HomeController()
+        {
+
+        }
         public HomeController(ICoursesRepository courseRepository)
         {
             this.courseRepository = courseRepository;
         }
         public ActionResult Index()
         {
-            return View(courseRepository.Courses);
+            return View(new ModelViewSchool(courseRepository.Courses, courseRepository.Persons, courseRepository.CourseInstructors));
         }
 
         public ActionResult About()
