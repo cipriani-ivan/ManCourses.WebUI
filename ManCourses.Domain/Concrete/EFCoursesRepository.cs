@@ -8,9 +8,10 @@ namespace ManCourses.Domain.Concrete
 
     public class EFCoursesRepository : ICoursesRepository
     {
+
         private EFDbContext context = new EFDbContext();
 
-        public IEnumerable<Course> Courses
+        public IEnumerable<Cours> Courses
         {
             get { return context.Courses; }
         }
@@ -18,9 +19,18 @@ namespace ManCourses.Domain.Concrete
         {
             get { return context.Persons; }
         }
-        public IEnumerable<CourseInstructor> CourseInstructors
+        //public IEnumerable<CourseInstructor> CourseInstructors
+        //{
+        //    get { return context.CourseInstructors; }
+        //}
+
+        public IEnumerable<Department> Departments
         {
-            get { return context.CourseInstructors; }
+            get { return context.Departments; }
+        }
+        public IEnumerable<StudentGrade> StudentGrades
+        {
+            get { return context.StudentGrades; }
         }
     }
 }

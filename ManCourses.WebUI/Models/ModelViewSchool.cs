@@ -8,14 +8,14 @@ namespace ManCourses.WebUI.Models
 {
     public class ModelViewSchool
     {
-        public IEnumerable<Course> Courses  { get; set; }
+        public IEnumerable<Cours> Courses  { get; set; }
         public IEnumerable<Person> Persons { get; set; }
-        public IEnumerable<CourseInstructor> CourseInstructors { get; set; }
-        public ModelViewSchool(IEnumerable<Course> Courses, IEnumerable<Person> Persons, IEnumerable<CourseInstructor> CourseInstructors)
+        //public IEnumerable<CourseInstructor> CourseInstructors { get; set; }
+        public ModelViewSchool(IEnumerable<Cours> Courses, IEnumerable<Person> Persons)
         {
             this.Courses = Courses;
             this.Persons = Persons;
-            this.CourseInstructors = CourseInstructors;
+            //this.CourseInstructors = CourseInstructors;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿@using ManCourses.WebUI.Models
+@*@using ManCourses.Domain.Entities*@
 @model ModelViewSchool
 
 @{
@@ -7,18 +8,18 @@
 
 @foreach(var p in Model.Courses)
 {
-    @p.CourseID
-        @p.Department
+    @p.CoursesID
+        @p.DepartmentsID
 }
 @foreach (var p in Model.Persons)
 {
-    @p.FirstName
     @p.LastName
+    @p.FirstName
 }
 
-@foreach (var p in Model.CourseInstructors)
+@*@foreach (var p in Model.CourseInstructors)
 {
     @p.CourseID
     @p.PersonID
-}
+}*@
 

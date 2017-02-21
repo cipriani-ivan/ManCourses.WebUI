@@ -12,26 +12,22 @@ namespace ManCourses.Domain.Entities
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
 
-    [Table("Persons")]
-    public partial class Person
+    public partial class Department
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Person()
+        public Department()
         {
-            this.StudentGrades = new HashSet<StudentGrade>();
             this.Courses = new HashSet<Cours>();
         }
+         
         [Key]
-        public int PersonsID { get; set; }
-        public string LastName { get; set; }
-        public string FirstName { get; set; }
-        public Nullable<System.DateTime> HireDate { get; set; }
-        public Nullable<System.DateTime> EnrollmentDate { get; set; }
+        public int DepartmentsID { get; set; }
+        public string Name { get; set; }
+        public decimal Budget { get; set; }
+        public System.DateTime StartDate { get; set; }
+        public Nullable<int> Administrator { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StudentGrade> StudentGrades { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Cours> Courses { get; set; }
     }

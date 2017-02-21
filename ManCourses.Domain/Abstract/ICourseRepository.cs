@@ -6,8 +6,10 @@ namespace ManCourses.Domain.Abstract
     public interface ICoursesRepository
     {
 
-        IEnumerable<Course> Courses { get; }
+        IEnumerable<Cours> Courses { get; }
         IEnumerable<Person> Persons { get; }
-        IEnumerable<CourseInstructor> CourseInstructors { get; }
+        //IEnumerable<CourseInstructor> CourseInstructors { get; }
+        IEnumerable<Department> Departments { get; }
+        IEnumerable<StudentGrade> StudentGrades { get; }
     }
 }
