@@ -15,10 +15,10 @@ namespace ManCourses.Domain.Entities
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class SchoolEntities1 : DbContext
+    public partial class SchoolEntities : DbContext
     {
-        public SchoolEntities1()
-            : base("name=SchoolEntities1")
+        public SchoolEntities()
+            : base("name=SchoolEntities")
         {
         }
     
@@ -27,6 +27,7 @@ namespace ManCourses.Domain.Entities
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<CourseInstructor> CourseInstructors { get; set; }
         public virtual DbSet<Cours> Courses { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Person> Persons { get; set; }

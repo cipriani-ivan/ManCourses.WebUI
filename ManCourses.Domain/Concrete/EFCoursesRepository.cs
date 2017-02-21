@@ -19,10 +19,10 @@ namespace ManCourses.Domain.Concrete
         {
             get { return context.Persons; }
         }
-        //public IEnumerable<CourseInstructor> CourseInstructors
-        //{
-        //    get { return context.CourseInstructors; }
-        //}
+        public IEnumerable<CourseInstructor> CourseInstructors
+        {
+            get { return context.CourseInstructors; }
+        }
 
         public IEnumerable<Department> Departments
         {

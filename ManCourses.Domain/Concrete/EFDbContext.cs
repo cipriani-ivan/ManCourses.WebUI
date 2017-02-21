@@ -4,7 +4,7 @@ using System.Data.Entity;
 namespace ManCourses.Domain.Concrete
 {
 
-    public class EFDbContext : SchoolEntities1
+    public class EFDbContext : SchoolEntities
     {
         //public DbSet<Cours> Courses { get; set; }
         //public DbSet<Person> Persons { get; set; }

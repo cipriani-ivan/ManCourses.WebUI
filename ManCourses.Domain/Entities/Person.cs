@@ -20,9 +20,10 @@ namespace ManCourses.Domain.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Person()
         {
+            this.CourseInstructors = new HashSet<CourseInstructor>();
             this.StudentGrades = new HashSet<StudentGrade>();
-            this.Courses = new HashSet<Cours>();
         }
+        
         [Key]
         public int PersonsID { get; set; }
         public string LastName { get; set; }
@@ -31,8 +32,8 @@ namespace ManCourses.Domain.Entities
         public Nullable<System.DateTime> EnrollmentDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StudentGrade> StudentGrades { get; set; }
+        public virtual ICollection<CourseInstructor> CourseInstructors { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Cours> Courses { get; set; }
+        public virtual ICollection<StudentGrade> StudentGrades { get; set; }
     }
 }

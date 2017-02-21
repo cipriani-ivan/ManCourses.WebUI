@@ -11,17 +11,14 @@ namespace ManCourses.Domain.Entities
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    [Table("StudentGrades")]
-    public partial class StudentGrade
+    [Table("CourseInstructors")]
+    public partial class CourseInstructor
     {
-        [Key]
-        public int EnrollmentID { get; set; }
         public int CoursesID { get; set; }
-        public int StudentID { get; set; }
-        public Nullable<decimal> Grade { get; set; }
+        public int PersonsID { get; set; }
+        public int Utility { get; set; }
     
         public virtual Cours Cours { get; set; }
         public virtual Person Person { get; set; }

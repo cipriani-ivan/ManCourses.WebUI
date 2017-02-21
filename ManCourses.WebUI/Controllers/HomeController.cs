@@ -28,7 +28,7 @@ namespace ManCourses.WebUI.Controllers
 
 
             ModelViewSchool model;
-            using (var ctx = new SchoolEntities1())
+            using (var ctx = new SchoolEntities())
             {
                 var persons = (from s in ctx.Persons
                                select s).ToList();
@@ -40,6 +40,7 @@ namespace ManCourses.WebUI.Controllers
                 var person = this.courseRepository.Persons;
 
                 var deparment = this.courseRepository.Departments;
+                var courseInstructor = this.courseRepository.CourseInstructors;
 
                 var studentGrade = this.courseRepository.StudentGrades;
                 model = new ModelViewSchool(course,person);

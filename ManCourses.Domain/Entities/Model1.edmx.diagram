@@ -4,15 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="884bb5a4c44b4eaca81e046b4bfad758" Name="Diagram1">
-        <EntityTypeShape EntityType="SchoolModel.Cours" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchoolModel.Department" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchoolModel.Person" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchoolModel.StudentGrade" Width="1.5" PointX="7.5" PointY="2.625" IsExpanded="true" />
+      <Diagram DiagramId="dcd35996f611482280aa4faa5f0facf3" Name="Diagram1">
+        <EntityTypeShape EntityType="SchoolModel.CourseInstructor" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolModel.Cours" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolModel.Department" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolModel.Person" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolModel.StudentGrade" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="SchoolModel.FK_CourseInstructors_Courses" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolModel.FK_CourseInstructors_Persons" ManuallyRouted="false" />
         <AssociationConnector Association="SchoolModel.FK_Courses_Departments" ManuallyRouted="false" />
         <AssociationConnector Association="SchoolModel.FK_StudentGrades_Courses" ManuallyRouted="false" />
         <AssociationConnector Association="SchoolModel.FK_StudentGrades_Student" ManuallyRouted="false" />
-        <AssociationConnector Association="SchoolModel.CourseInstructors" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
